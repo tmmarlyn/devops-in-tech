@@ -1,6 +1,7 @@
 FROM python:3.9
-WORKDIR /app
-ADD . /app
-EXPOSE 8081
-CMD ["python"]
+WORKDIR /usr/src/app
+ADD . /usr/src/app
+RUN pip install redis
+EXPOSE 5000
+CMD ["python", "main.py"]
 ENTRYPOINT ["main.py"]
