@@ -3,7 +3,7 @@ services:
   web:
     build: services/frontend
     ports:
-      - "5000:5000"
+      - "8080:8080"
     networks:
       - frontend
       - backend
@@ -16,7 +16,7 @@ services:
   writer:
     build: services/writer
     ports:
-      - "8080:8080"
+      - "5000:5000"
     networks:
       - backend
   redis:
